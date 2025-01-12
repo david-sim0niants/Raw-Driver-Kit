@@ -38,7 +38,7 @@ _start:
 
 	mov $main_stack_top, %esp # setup stack pointer
 
-	push %ebx # EBX stores pointer to multiboot2 info, pass it as an argument
+	push %ebx # EBX stores pointer to the multiboot2 info, pass it as an argument
 	call main32 # call main32 entry
 
 	test %eax, %eax
