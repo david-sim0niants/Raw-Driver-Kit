@@ -1,6 +1,8 @@
 #ifndef __CTYPE_H__
 #define __CTYPE_H__
 
+#include <stdbool.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif

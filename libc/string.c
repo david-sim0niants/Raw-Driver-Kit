@@ -1,7 +1,5 @@
 #include <stddef.h>
 
-extern "C" {
-
 void *memcpy(void *dst, const void *src, size_t cnt)
 {
 	const char *c_src = (const char *)src;
@@ -92,6 +90,4 @@ int strncmp(const char *s1, const char *s2, size_t n)
 		return 0;
 	else
 		return *(const unsigned char *)s1 - *(const unsigned char *)s2;
-}
-
 }
