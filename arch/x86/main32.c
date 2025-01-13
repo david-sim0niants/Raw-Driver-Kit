@@ -1,10 +1,12 @@
-#include "x86/idt.h"
+#include <x86/idt.h>
+#include <x86/pic.h>
 
 char *const vga_text_buffer = (char *)0xB8000;
 
 int main32(void)
 {
     setup_idt32();
+    pic_remap(0x20, 0x28);
     enable_idt();
 
     char c = 0;

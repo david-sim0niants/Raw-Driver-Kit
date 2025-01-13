@@ -1,4 +1,4 @@
-#include "x86/idt.h"
+#include <x86/idt.h>
 
 #define IDT_SIZE 256
 #define IDT_NR_EXCEPTIONS 32
