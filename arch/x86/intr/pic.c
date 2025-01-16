@@ -1,4 +1,4 @@
-#include <x86/pic.h>
+#include <x86/intr/pic.h>
 
 void pic_remap(int offset1, int offset2)
 {
