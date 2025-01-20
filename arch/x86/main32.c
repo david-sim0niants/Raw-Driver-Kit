@@ -1,14 +1,16 @@
 #include <x86/intr/idt.h>
 #include <x86/intr/pic.h>
 #include <x86/ps2_keyboard.h>
+#include <x86/timer.h>
 #include <x86/system.h>
 
 char *const vga_text_buffer = (char *)0xB8000;
 
-int main32(void)
+int main32(void *boot_info)
 {
     setup_idt32();
     pic_remap(0x20, 0x28);
+    timer_enable();
     ps2_keyboard_enable();
     enable_interrupts();
 

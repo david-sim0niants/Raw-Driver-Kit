@@ -16,8 +16,3 @@ struct IDTR32 {
 } __attribute__((packed));
 
 void setup_idt32(void);
-
-extern uint32_t intr32_entries[256];
-
-void intr32_trap_handler(uint32_t error_code, uint32_t vector);
-void intr32_irq_handler(uint32_t vector);

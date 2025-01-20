@@ -1,0 +1,5 @@
+#pragma once
+
+#define INTR32_NR_INTS  256
+#define INTR32_NR_TRAPS 32
+#define INTR32_NR_IRQS  (INTR32_NR_INTS - INTR32_NR_TRAPS)

@@ -2,7 +2,8 @@ set(x86_INCLOUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 set(TARGET_NAME rdksh32)
 
-add_executable(${TARGET_NAME} entry.S main32.c ps2_keyboard.c intr/idt.S intr/idt.c intr/pic.c)
+add_executable(${TARGET_NAME}
+    entry.S main32.c ps2_keyboard.c timer.c intr/handlers.c intr/idt.c intr/pic.c intr/stubs.S)
 
 set(LINKER_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/rdksh32.linker.ld)
 set(LINK_OTHER_OPTIONS	"--gc-sections,--build-id=none,--whole-archive")
