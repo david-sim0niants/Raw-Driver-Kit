@@ -7,7 +7,7 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_ASM_FLAGS "${DEFAULT_CMAKE_ASM_FLAGS} -x assembler-with-cpp")
 set(COMMON_C_CXX_FLAGS "-no-pie -fno-pic -fno-ident -ffreestanding -fno-exceptions -nostdlib -nostdinc -fno-stack-protector -nostartfiles -lgcc")
 
-set(CMAKE_C_FLAGS   "${DEFAULT_CMAKE_C_FLAGS} ${COMMON_C_CXX_FLAGS}")
+set(CMAKE_C_FLAGS   "${DEFAULT_CMAKE_C_FLAGS} ${COMMON_C_CXX_FLAGS} -z noexecstack")
 set(CMAKE_CXX_FLAGS "${DEFAULT_CMAKE_CXX_FLAGS} ${COMMON_C_CXX_FLAGS} -fno-rtti")
 
 set(CMAKE_STATIC_LIBRARY_PREFIX "")

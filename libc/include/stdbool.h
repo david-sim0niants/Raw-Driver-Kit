@@ -2,8 +2,7 @@
 #define __STDBOOL_H__
 
 #ifndef __cplusplus
-#define true 1
-#define false 0
+enum { false = 0, true = 1 };
 typedef _Bool bool;
 #endif
 
